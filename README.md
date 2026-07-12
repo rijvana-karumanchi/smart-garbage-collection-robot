@@ -1,5 +1,3 @@
-# smart-garbage-collection-robot# Smart Garbage Collection Robot
-
 # Smart Garbage Collection Robot
 
 ## How the Project Works
