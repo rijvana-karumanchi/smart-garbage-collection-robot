@@ -1,59 +1,78 @@
 # smart-garbage-collection-robot# Smart Garbage Collection Robot
 
-A robot that automatically detects and segregates **dry** and **wet** waste using sensors and an embedded control system, reducing the need for manual sorting and promoting cleaner, more efficient waste management.
+# Smart Garbage Collection Robot
 
-## How the Robot Works
+## How the Project Works
 
-### Objective
+The Smart Garbage Collection Robot is designed to detect waste and classify it as dry or wet waste.
 
-The objective of this project is to build a robot that can identify waste as it is collected and automatically sort it into **dry waste** and **wet waste** bins, without any manual intervention. The robot moves around (or waste is fed into it), detects the type of waste using onboard sensors, and directs it into the correct compartment.
+## Objective
 
-### Setup
+The objective of this project is to improve waste management by automatically identifying and separating dry and wet waste.
 
-* The robot chassis houses two separate compartments — one for dry waste and one for wet waste.
-* A waste inlet/collection mechanism (funnel, conveyor, or scoop) feeds waste items toward the sensing unit.
-* A moisture/classification sensor is positioned at the sensing point to analyze each item before it is sorted.
-* A servo-controlled flap or rotating chute directs the waste into the correct bin based on the classification result.
+## Working Principle
 
-### Working Mechanism
+### Object Detection
 
-1. **Waste Detection**
-   * An IR or ultrasonic sensor detects when a waste item has entered the sensing zone.
-   * This triggers the classification process to begin.
+The ultrasonic sensor detects waste placed near the system.
 
-2. **Waste Classification**
-   * A moisture sensor (or capacitive/resistive sensor) measures the moisture content of the waste item.
-   * If the moisture level is above a set threshold, the item is classified as **wet waste**.
-   * If the moisture level is below the threshold, the item is classified as **dry waste**.
+### Waste Classification
 
-3. **Sorting Mechanism**
-   * Based on the classification result, a servo motor rotates a flap/chute to direct the waste into the appropriate bin.
-   * The robot resets the flap to a neutral position, ready for the next item.
+The wet sensor checks the type of waste.
 
-4. **Bin Level Monitoring** *(optional feature)*
-   * Ultrasonic sensors placed inside each bin can monitor fill levels.
-   * An alert (LED/buzzer or notification) can indicate when a bin is nearing full capacity.
+- Wet waste is identified using the wet sensor.
+- Dry waste is classified when moisture is not detected.
 
-### Features
+### Servo Motor Control
 
-* **Automatic Classification** — No manual sorting required; waste is classified in real time as it's collected.
-* **Dual Compartment System** — Physically separates dry and wet waste to prevent contamination.
-* **Real-Time Sensing** — Uses moisture sensors for instant classification of each waste item.
-* **Bin Level Indication** — Notifies when bins are full (if implemented).
-* **Compact and Portable Design** — Can be deployed in homes, offices, or public spaces.
+The servo motor rotates based on the type of waste and helps separate dry and wet waste.
 
-### Future Improvements
+## Features
 
-Additional features that could be implemented:
+- Automatic waste detection
+- Dry and wet waste classification
+- Servo motor-based separation
+- ESP32-based control system
+- Simple and efficient operation
 
-* Camera-based waste classification using machine learning (image recognition) for higher accuracy across more waste categories (e.g., plastic, metal, paper, e-waste).
-* IoT connectivity to send bin-fill alerts to a mobile app or dashboard.
-* Solar-powered operation for outdoor/public deployment.
-* Mobile robot base with autonomous navigation to collect waste from multiple points.
-* Integration with municipal waste tracking systems.
+## Hardware Components
 
+- ESP32 Development Board
+- Ultrasonic Sensor
+- Wet Sensor
+- Servo Motor
+- Jumper Wires
+- Power Supply
 
+## Software Requirements
 
-## License
+- Arduino IDE
+- ESP32Servo Library
 
-This project is open source and available under the [MIT License](LICENSE).
+## Installation
+
+1. Install Arduino IDE.
+2. Install ESP32 and ESP32Servo library.
+3. Connect the hardware.
+4. Open the `.ino` file.
+5. Upload the code to ESP32.
+
+## Future Improvements
+
+- IoT-based waste monitoring
+- Mobile application integration
+- Automatic garbage collection
+- AI-based waste classification
+- Real-time bin level monitoring
+
+## Run the Project
+
+Connect the ESP32 and upload the Arduino code to run the project.
+
+## Installation Steps
+
+Clone the Repository: git clone https://github.com/rijvana-karumanchi/smart-garbage-collection-robot.git
+
+Install ESP32Servo: Install the ESP32Servo library using Arduino IDE Library Manager.
+
+And at last upload the code to the ESP32 and run the project.
